@@ -1,0 +1,15 @@
+//
+//  エラー型を定義したprotoファイル
+//
+
+// ライセンスヘッダ:バージョン3を利用
+syntax = "proto3"; 
+// 生成コードの格納先パッケージを指定
+option go_package = "/pb";
+// パッケージの宣言
+package proto;
+
+message Error {
+    string type = 1;
+    string message = 2;
+}

@@ -1,0 +1,22 @@
+//
+// クライアントとサーバ間で利用するデータ格納型を定義したprotoファイル
+//
+
+// ライセンスヘッダ:バージョン3を利用
+syntax = "proto3";
+// 生成コードの格納先パッケージを指定
+option go_package = "/pb";
+// パッケージの宣言
+package proto;
+
+message Category {
+    string id = 1;
+    string name = 2;
+} 
+
+message Product {
+    string id = 1;
+    string name = 2;
+    int32 price = 3;
+    optional Category category = 4;
+}
